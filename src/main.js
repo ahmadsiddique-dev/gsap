@@ -4,6 +4,8 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { SplitText } from 'gsap/SplitText'
 
+gsap.registerPlugin(ScrollTrigger)
+
 const obj = {
   value: 0
 }
@@ -30,7 +32,7 @@ gsap.to(obj, {
 
 const tl = gsap.timeline({ paused: true })
 
-gsap.set('.heading h1, .sub-heading p', {
+gsap.set('.heading h1, .sub-heading p, .btns', {
   yPercent: 110
 })
 
@@ -51,16 +53,36 @@ tl.to('.loader', {
   yPercent: 0,
   duration: 1.6,
   ease: 'power2.inOut'
+
+
 }, "-=0.9")
 .to('.sub-heading p', {
   yPercent: 0,
   duration: 1.6,
   ease: 'power2.inOut'
-}, "-=0.9");
+}, "-=0.9")
+.to('.btns', {
+  yPercent: 0,
+  duration: 1.6,
+  ease: 'power2.inOut'
+}, "-=0.9")
 
 
 gsap.set('.img-div img', {
   clipPath: "inset(32% 33% 28% 32%)",
+  scale: 1.4,
+})
+
+gsap.to('.img-div img', {
+  clipPath: "inset(0% 0% 0% 0%)",
+  scale: 1,
+  scrollTrigger: {
+    trigger: '.scroll-element',
+    start: 'top top',
+    end: 'bottom top',
+    scrub: 1,
+    pin: true,
+  }
 })
 
 
