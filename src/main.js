@@ -32,7 +32,7 @@ gsap.to(obj, {
 
 const tl = gsap.timeline({ paused: true })
 
-gsap.set('.heading h1, .sub-heading p, .btns', {
+gsap.set('.heading h1, .sub-heading p, .btns button', {
   yPercent: 110
 })
 
@@ -53,15 +53,13 @@ tl.to('.loader', {
   yPercent: 0,
   duration: 1.6,
   ease: 'power2.inOut'
-
-
 }, "-=0.9")
 .to('.sub-heading p', {
   yPercent: 0,
   duration: 1.6,
   ease: 'power2.inOut'
 }, "-=0.9")
-.to('.btns', {
+.to('.btns button', {
   yPercent: 0,
   duration: 1.6,
   ease: 'power2.inOut'
