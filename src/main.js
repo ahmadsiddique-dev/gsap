@@ -27,7 +27,12 @@ gsap.to(obj, {
   }
 })
 
+
 const tl = gsap.timeline({ paused: true })
+
+gsap.set('.heading h1, .sub-heading p', {
+  yPercent: 110
+})
 
 tl.to('.loader', {
   yPercent: 100,
@@ -42,4 +47,13 @@ tl.to('.loader', {
   autoAlpha: 0,
   ease: 'power2.inOut'
 }, "-=1.6")
-
+.to('.heading h1', {
+  yPercent: 0,
+  duration: 1.6,
+  ease: 'power2.inOut'
+}, "-=0.9")
+.to('.sub-heading p', {
+  yPercent: 0,
+  duration: 1.6,
+  ease: 'power2.inOut'
+}, "-=0.9")
