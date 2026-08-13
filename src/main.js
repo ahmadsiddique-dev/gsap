@@ -56,4 +56,11 @@ tl.to('.loader', {
   yPercent: 0,
   duration: 1.6,
   ease: 'power2.inOut'
-}, "-=0.9")
+}, "-=0.9");
+
+
+gsap.set('.img-div img', {
+  clipPath: "inset(32% 33% 28% 32%)",
+})
+
+
