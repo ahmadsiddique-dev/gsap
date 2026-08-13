@@ -10,7 +10,7 @@ body {
 
 .counter {
   color: white;
-  font-size: 2rem;
+  font-size: 1rem;
   text-align: center;
   margin-top: 20px;
 }
@@ -57,11 +57,11 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  padding-top: 25rem;
+  padding-top: 13rem;
 }
 
 .content-section h1 {
-  font-size: 16rem;
+  font-size: 9rem;
   margin-bottom: 20px;
   font-family: "Overpass", sans-serif;
   font-optical-sizing: auto;
@@ -70,8 +70,8 @@ body {
 }
 
 .content-section p {
-  font-size: 4rem;
-  margin-top: 50px;
+  font-size: 2rem;
+  margin-top: 10px;
   margin-bottom: 20px;
   font-family: 'Overpass', sans-serif;
   font-optical-sizing: auto;
@@ -103,8 +103,8 @@ body {
 }
 
 button {
-  padding: 20px 40px;
-  font-size: 2.2rem;   
+  padding: 10px 20px;
+  font-size: 1.2rem;   
 }
 
 .primary-btn {
