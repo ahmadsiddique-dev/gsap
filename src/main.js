@@ -84,3 +84,32 @@ gsap.to('.img-div img', {
 })
 
 
+const secondaryBtns = document.querySelector('.secondary-btn')
+
+secondaryBtns.addEventListener('mouseenter', (e) => {
+  gsap.to('.s-btn-fill', {
+    scaleX: 1,
+    duration: 0.4,
+    ease: 'power2.inOut'
+  })
+  gsap.to('.s-btn-text', {
+    color: '#fff',
+    duration: 0.4,
+    ease: 'power2.inOut'
+  })
+})
+
+secondaryBtns.addEventListener('mouseleave', (e) => {
+  gsap.to('.s-btn-fill', {
+    scaleX: 0,
+    duration: 0.4,
+    ease: 'power2.inOut'
+  })
+  gsap.to('.s-btn-text', {
+    color: '#6f4545',
+    duration: 0.4,
+    ease: 'power2.inOut'
+  })
+})
+
+

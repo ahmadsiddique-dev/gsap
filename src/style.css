@@ -124,5 +124,22 @@ button {
 .secondary-btn {
   background-color: transparent;
   color: #6f4545;
+  position: relative;
+  overflow: hidden;
   border: 2px solid #6f4545;
+}
+
+.s-btn-fill {
+  position: absolute;
+  left: 0;
+  inset: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  background-color: #6f4545;
+}
+
+.s-btn-text {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
 }
